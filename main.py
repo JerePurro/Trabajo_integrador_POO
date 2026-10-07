@@ -10,23 +10,8 @@ def main():
     mesa1 = Mesa(1, "Planta Baja", 4)
     mesa2 = Mesa(2, "Terraza", 2)
 
-    plato1 = Plato(
-        "Milanesa Napolitana",
-        8500,
-        False,
-        "Papas Fritas",
-        "Principal",
-        False
-    )
-
-    plato2 = Plato(
-        "Ensalada Caesar",
-        6200,
-        False,
-        "crutones",
-        "Entrada",
-        False
-    )
+    plato1 = Plato("Milanesa Napolitana", 8500, False, "Papas Fritas", "Principal", False)
+    plato2 = Plato("Ensalada Caesar", 6200, True, "crutones", "Entrada", False)
 
     plato1.añadir_ingredientes("Huevo frito")
     plato1.quitar_ingredientes("Cebolla")
@@ -39,6 +24,7 @@ def main():
     pedido_mesa1 = Pedido(mesa1)
 
     pedido_mesa1.agregar(plato1)
+    pedido_mesa1.agregar(plato2)
     pedido_mesa1.agregar(bebida1)
     pedido_mesa1.agregar(bebida2)
 
