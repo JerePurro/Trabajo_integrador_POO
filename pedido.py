@@ -20,9 +20,8 @@ class Pedido:
                 "Solo se pueden agregar objetos que vengan de la clase Producto"
             )
         self.productos.append(producto)
-        print(
-            f"Se agrego {producto.nombre} al pedido de la mesa {self.mesa.numero}"
-        )
+    
+        
 
     def eliminar_producto(self, producto):
         for elemento in self.productos:
